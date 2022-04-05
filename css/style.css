@@ -1,0 +1,166 @@
+body{
+    text-align: center;
+    padding-top: 50px;
+    background: url(../Imagenes/Fondo.jpg);
+   
+}
+
+h1{
+    color: #e079c5;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+#contBotones{
+    width: 650px;
+    height: 450px; 
+    background: #e079c5;
+    
+    }
+
+#contFigura{
+    width: 450px;
+    height: 450px;
+    background: #e079c5;
+    }
+
+#figura{
+    width: 180px;
+    height: 180px;
+    background: #a70aaa;
+    margin: 0 auto;
+    margin-top: 60px;
+    transition: 1s;    /* se le da para el tiempo del cambio de cuadrado a circulo */ 
+}
+/* se llama a figura siempre con # para traer un id y se agrega circulo para unirlo y 50% sea el borde del radio */
+#figura.circulo{  
+    border: 3px solid black;
+    border-radius: 50%;
+    transform: rotate(360deg);   /* le damos un cambio mas para que rote 360 grados */
+    background: #a70aaa; /* hara que al cambiar se ponga color rojo */
+  
+}
+
+#figura.rectangulo{ 
+    border: 3px solid black; 
+    width: 180px;
+    height: 320px;
+    transform: rotate(360deg);   /* le damos un cambio mas para que rote 360 grados */
+    background: #a70aaa; /* hara que al cambiar se ponga color rojo */
+  
+}
+
+#figura.rombo{  
+    border: 3px solid black;
+    background: #a70aaa;
+    transform: rotate(45deg);
+}
+#figura.fimagen{
+    width: 230px;
+    height: 250px;
+    background: url(../Imagenes/Fondo.jpg);
+    background-size: cover;
+    border: 2px;
+}
+#fila{
+    display: flex;  /*propiedad para configuración de elemenos en 2d para que este al centro*/
+    justify-content:space-around; /*se usa para ordenar los elementos en toda la figura horizontalemnete centrar toda la figura*/
+    /*background: red; /*color de fondo*/
+    /*height: 700px;  /*alto de la figura*/
+    /*align-items: center;  /*se usa para ordenar los elementos verticalemente*/
+}
+
+#figura.subir{
+    border: 3px solid black;
+    transform: translateY(-50px);
+}
+
+#figura.bajar{    
+    border: 3px solid black;
+    transform: translateY(50px);
+}
+#figura.izquierda{
+    border: 3px solid black;
+    transform: translateX(-50px);
+}
+#figura.derecha{
+    border: 3px solid black;
+    transform: translateX(50px);
+}
+
+#figura.diagonal1{
+    border: 3px solid black;
+    transform: translateY(-60px) translateX(-60px);
+}
+
+#figura.diagonal2{
+    border: 3px solid black;
+    transform: translateY(-60px) translateX(60px);
+}
+
+#figura.diagonal3{
+    border: 3px solid black;
+    transform: translateY(60px) translateX(-60px);
+}
+
+#figura.diagonal4{
+    border: 3px solid black;
+    transform: translateY(-60px) translateX(60px);
+}
+
+
+
+button{
+    background: transparent;
+    padding: 14px  40px;
+    margin: 10px;
+    border: 1px solid #000000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+button:hover{
+    background: #a70aaa;
+    color: #000000;
+}
+
+input, select{
+    padding: 10px 12px;
+}
+
+#ContoOperaciones{
+    padding: 150px 0;
+    
+}
+
+#ContOperaciones button{
+    background: #e079c5;
+    
+}
+/* se crea chat y se le dan atributos, se trata de hacer salir el chat al lado derecho de la pantalla */
+#chat{
+    background: #e079c5;
+    width: 300px;
+    height: 350px;
+    position: fixed;
+    right: -300px;
+    top: 20%;
+    transition: 1s;
+}
+/* este activara el boton de chat */
+#chat.active{
+    right: 0;
+}
+
+#btnChat{
+position: fixed;
+right: -60px;
+top: 40%;
+background: #e079c5;
+transform: rotate(-90deg);
+transition: 1s;
+}
+
+#btnChat.active{
+    right: 240px;
+}
